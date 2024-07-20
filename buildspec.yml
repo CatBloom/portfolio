@@ -7,6 +7,9 @@ phases:
   build:
     commands:
       - yarn build
+  post_build:
+    commands:
+      - aws s3 sync dist/ s3://${S3_BUCKET_NAME} --delete
 
 artifacts:
   files:
