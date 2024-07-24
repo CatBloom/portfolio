@@ -5,21 +5,21 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue';
 
-const typingText = ref('')
+const typingText = ref('');
 
 const typing = (sentence) => {
   Array.from(sentence).forEach((char, index) => {
     setTimeout(() => {
-      typingText.value += char
-    }, 200 * ++index)
-  })
-}
+      typingText.value += char;
+    }, 200 * ++index);
+  });
+};
 
 onMounted(() => {
-  typing('Catbloom’s Portfolio!')
-})
+  typing('Catbloom’s Portfolio!');
+});
 </script>
 
 <style>
