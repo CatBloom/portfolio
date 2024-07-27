@@ -1,10 +1,5 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router';
-import Sidebar from './components/Sidebar.vue';
-</script>
-
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :class="{ dark: isDarkMode }">
     <header class="fixed-header">
       <Sidebar />
     </header>
@@ -14,7 +9,7 @@ import Sidebar from './components/Sidebar.vue';
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .wrapper {
   display: grid;
   grid-template-columns: 6rem 1fr;
@@ -32,3 +27,13 @@ import Sidebar from './components/Sidebar.vue';
   padding: 2rem;
 }
 </style>
+
+<script setup lang="ts">
+import Sidebar from './components/Sidebar.vue';
+import { RouterView } from 'vue-router';
+import { useDarkModeStore } from './stores/dark-mode';
+import { storeToRefs } from 'pinia';
+
+const darkModeStore = useDarkModeStore();
+const { isDarkMode } = storeToRefs(darkModeStore);
+</script>
