@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import IconLight from './icons/IconLight.vue';
 import IconDark from './icons/IconDark.vue';
 import { useDarkModeStore } from '../stores/dark-mode';
@@ -27,7 +27,6 @@ function clickEvent() {
 <style scoped lang="scss">
 .toggle {
   display: flex;
-  justify-content: center;
   cursor: pointer;
 }
 </style>
