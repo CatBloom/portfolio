@@ -1,15 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/TopView.vue';
 import gsap from 'gsap';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView,
-    },
+    // {
+    //   path: '/',
+    //   name: 'top',
+    //   // component: HomeView,
+    // },
     {
       path: '/profile',
       name: 'profile',
@@ -21,9 +20,9 @@ const router = createRouter({
       component: () => import('../views/WorkView.vue'),
     },
     {
-      path: '/skilset',
-      name: 'skilset',
-      component: () => import('../views/SkilsetView.vue'),
+      path: '/skill',
+      name: 'skill',
+      component: () => import('../views/SkillView.vue'),
     },
     {
       path: '/contact',
@@ -33,7 +32,7 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
   if (to.path == '/') {
     next();
   } else {
