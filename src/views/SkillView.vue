@@ -4,7 +4,7 @@
       <template #title> Skill </template>
     </PageContent>
 
-    <div class="skil-table" v-for="skill in skills">
+    <div class="skill-table" v-for="(skill, i) in skills" :key="i">
       <PageContent>
         <template #sub-title>{{ skill.lang }}</template>
         <template #content>
@@ -12,12 +12,12 @@
             <thead>
               <tr>
                 <th>TechStack</th>
-                <th>Experience</th>
+                <th>Exp</th>
                 <th>Details</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="v in skill.exp">
+              <tr v-for="(v, i) in skill.exp" :key="i">
                 <td>{{ v.name }}</td>
                 <td>{{ v.year }}年</td>
                 <td>{{ v.detail }}</td>
@@ -122,7 +122,7 @@ const skills: Skills[] = [
 </script>
 
 <style scoped lang="scss">
-.skil-table {
+.skill-table {
   table {
     margin-left: 2rem;
     text-align: left;
@@ -131,10 +131,12 @@ const skills: Skills[] = [
       border-bottom: 1px solid;
       padding: 0.5rem;
       word-break: break-all;
+      min-width: 6rem;
     }
     td {
       padding: 0.5rem;
       word-break: break-all;
+      min-width: 6rem;
     }
   }
 }

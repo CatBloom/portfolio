@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { defineProps, ref } from 'vue';
+import { defineProps } from 'vue';
 import { useDarkModeStore } from '../stores/dark-mode';
 import { storeToRefs } from 'pinia';
 
