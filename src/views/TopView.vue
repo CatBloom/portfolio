@@ -4,7 +4,7 @@
       {{ typingText }}
     </div>
     <div class="top-button">
-      <template v-for="button in routeButtons">
+      <template v-for="(button, i) in routeButtons" :key="i">
         <Button :label="button.label" :routePath="button.path" />
       </template>
     </div>
@@ -15,10 +15,9 @@
 </template>
 
 <script setup>
-import Button from '../components/Button.vue';
+import Button from '../components/BaseButton.vue';
 import DarkModeToggle from '../components/DarkModeToggle.vue';
 import { useDarkModeStore } from '../stores/dark-mode';
-import { storeToRefs } from 'pinia';
 import { ref, onMounted } from 'vue';
 
 const darkModeStore = useDarkModeStore();
