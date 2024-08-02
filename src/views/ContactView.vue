@@ -9,7 +9,7 @@
         <div class="content">
           <p>ご相談、ご感想など、お気軽にご連絡ください。</p>
           <p>
-            お問い合わせは 【catbloom.web@gmail.com】
+            お問い合わせは 【catbloom.web@gmail.com】・
             <a href="https://github.com/CatBloom" target="_blank" rel="noopener noreferrer">
               Github
             </a>

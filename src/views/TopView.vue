@@ -3,12 +3,13 @@
     <div class="typing-animation">
       {{ typingText }}
     </div>
+    <div class="scroll-point"></div>
     <div class="top-button">
       <template v-for="(button, i) in routeButtons" :key="i">
         <Button :label="button.label" :routePath="button.path" />
       </template>
     </div>
-    <div>
+    <div class="toggle-button">
       <DarkModeToggle @click="toggleDarkMode" />
     </div>
   </div>
@@ -51,9 +52,10 @@ onMounted(() => {
   align-items: center;
   height: 60vh;
   width: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   flex-flow: column;
-
+  font-weight: bold;
+  padding-top: 20vh;
   .typing-animation::after {
     content: '|';
     animation: flashing 1s linear infinite;
@@ -66,6 +68,10 @@ onMounted(() => {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 3rem;
+}
+
+.toggle-button {
+  margin-top: 2rem;
 }
 
 @keyframes flashing {
