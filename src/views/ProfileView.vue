@@ -26,7 +26,7 @@
       <template #sub-title> Experience </template>
       <template #content>
         <table class="content_table">
-          <t-body>
+          <tbody>
             <tr>
               <td>2016/03</td>
               <td>長野商業高等学校卒業</td>
@@ -53,7 +53,7 @@
                 また、インフラ構築・監視を行うチームにも所属し、各サービスの障害対応を行なっています。
               </td>
             </tr>
-          </t-body>
+          </tbody>
         </table>
       </template>
     </PageContent>
@@ -66,7 +66,7 @@ import PageContent from '../components/PageContent.vue';
 
 <style scoped lang="scss">
 ul {
-  margin-left: 2rem;
+  margin-left: 1rem;
   padding: 0;
   li {
     margin-top: 1rem;
@@ -82,8 +82,5 @@ ul {
 
 .content_table {
   border-spacing: 1rem;
-  td {
-    min-width: 9rem;
-  }
 }
 </style>

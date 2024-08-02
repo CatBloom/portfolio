@@ -31,7 +31,7 @@ const navigate = () => {
 <style scoped lang="scss">
 .button {
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   font-size: 1rem;
   border-radius: 5px;

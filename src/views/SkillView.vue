@@ -8,22 +8,24 @@
       <PageContent>
         <template #sub-title>{{ skill.lang }}</template>
         <template #content>
-          <table>
-            <thead>
-              <tr>
-                <th>TechStack</th>
-                <th>Exp</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(v, i) in skill.exp" :key="i">
-                <td>{{ v.name }}</td>
-                <td>{{ v.year }}年</td>
-                <td>{{ v.detail }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="skill-table-content">
+            <table>
+              <thead>
+                <tr>
+                  <th>TechStack</th>
+                  <th>Exp</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(v, i) in skill.exp" :key="i">
+                  <td>{{ v.name }}</td>
+                  <td>{{ v.year }}年</td>
+                  <td>{{ v.detail }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </template>
       </PageContent>
     </div>
@@ -123,20 +125,19 @@ const skills: Skills[] = [
 
 <style scoped lang="scss">
 .skill-table {
-  table {
-    margin-left: 2rem;
-    text-align: left;
-    border-collapse: collapse;
-    th {
-      border-bottom: 1px solid;
-      padding: 0.5rem;
-      word-break: break-all;
-      min-width: 6rem;
-    }
-    td {
-      padding: 0.5rem;
-      word-break: break-all;
-      min-width: 6rem;
+  .skill-table-content {
+    padding: 1rem;
+    table {
+      text-align: left;
+      border-collapse: collapse;
+      th {
+        border-bottom: 1px solid;
+        padding: 0.5rem;
+      }
+      td {
+        padding: 0.5rem;
+        word-break: break-all;
+      }
     }
   }
 }
