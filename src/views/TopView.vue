@@ -3,6 +3,7 @@
     <div class="typing-animation">
       {{ typingText }}
     </div>
+    <div class="scroll-point"></div>
     <div class="top-button">
       <template v-for="(button, i) in routeButtons" :key="i">
         <Button :label="button.label" :routePath="button.path" />

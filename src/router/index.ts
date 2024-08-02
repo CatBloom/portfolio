@@ -49,7 +49,7 @@ router.beforeEach((to, _, next) => {
         duration: 0.2,
         opacity: 1,
         onComplete: () => {
-          const el = document.querySelector('.typing-animation');
+          const el = document.querySelector('.scroll-point');
           if (el) {
             el.scrollIntoView({ behavior: 'smooth' });
           }
