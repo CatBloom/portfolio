@@ -24,7 +24,7 @@
                 <li>Route53</li>
                 <li>CodeBuild</li>
               </ul>
-              <li>Github</li>
+              <li>Repository</li>
               <ul>
                 <li>
                   <a
@@ -64,7 +64,7 @@
                   </a>
                 </li>
               </ul>
-              <li>Github</li>
+              <li>Repository</li>
               <ul>
                 <li>
                   <a

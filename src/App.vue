@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="{ dark: isDarkMode }">
     <header class="header">
-      <TopView />
+      <PageHeader />
     </header>
     <main class="content">
       <RouterView />
@@ -18,6 +18,8 @@
 
 .content {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
@@ -26,7 +28,7 @@
 </style>
 
 <script setup lang="ts">
-import TopView from './views/TopView.vue';
+import PageHeader from './components/PageHeader.vue';
 import { RouterView } from 'vue-router';
 import { useDarkModeStore } from './stores/dark-mode';
 import { storeToRefs } from 'pinia';
