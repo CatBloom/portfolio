@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div class="header">
     <h1 class="typing-animation">
       {{ typingText }}
     </h1>
@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-.top {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
