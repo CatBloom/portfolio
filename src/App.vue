@@ -18,6 +18,8 @@
 
 .content {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
