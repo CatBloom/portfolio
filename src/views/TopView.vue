@@ -1,8 +1,8 @@
 <template>
   <div class="top">
-    <div class="typing-animation">
+    <h1 class="typing-animation">
       {{ typingText }}
-    </div>
+    </h1>
     <div class="scroll-point"></div>
     <div class="top-button">
       <template v-for="(button, i) in routeButtons" :key="i">
@@ -56,6 +56,9 @@ onMounted(() => {
   flex-flow: column;
   font-weight: bold;
   padding-top: 20vh;
+  h1 {
+    font-size: 2rem;
+  }
   .typing-animation::after {
     content: '|';
     animation: flashing 1s linear infinite;
