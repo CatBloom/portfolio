@@ -60,6 +60,7 @@
               <ul>
                 <li>React</li>
                 <li>Golang</li>
+                <li>Echo</li>
                 <li>Lambda</li>
                 <li>APIGateway</li>
                 <li>DynamoDB etc...</li>
