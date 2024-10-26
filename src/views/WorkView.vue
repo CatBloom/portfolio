@@ -49,12 +49,21 @@
             <img src="https://catbloom-images.s3.ap-northeast-1.amazonaws.com/jantools.png" />
           </div>
           <div class="info">
-            <p>麻雀の成績管理ツールです。</p>
+            <p>麻雀の成績管理アプリです。</p>
+            <p>
+              元々はAngular+Heroku+PostgreSQLで作成されたアプリでしたが、
+              <br />
+              運用コストや最近の流行りを意識し、React+Lambda+DynamoDBを使用したアプリにリプレースしました。
+            </p>
             <ul class="parent-list">
               <li>TechStack</li>
               <ul>
-                <li>Angular</li>
+                <li>React</li>
                 <li>Golang</li>
+                <li>Echo</li>
+                <li>Lambda</li>
+                <li>APIGateway</li>
+                <li>DynamoDB etc...</li>
               </ul>
               <li>Link</li>
               <ul>
@@ -68,18 +77,18 @@
               <ul>
                 <li>
                   <a
-                    href="https://github.com/CatBloom/jantools"
+                    href="https://github.com/CatBloom/jantools-v2"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >jantools
+                    >jantools-v2
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://github.com/CatBloom/jantools-api"
+                    href="https://github.com/CatBloom/jantools-api-v2"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >jantools-api
+                    >jantools-api-v2
                   </a>
                 </li>
               </ul>

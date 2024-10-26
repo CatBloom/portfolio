@@ -58,8 +58,14 @@ const skills: Skills[] = [
     lang: 'Frontend',
     exp: [
       {
+        name: 'React',
+        year: 1,
+        detail: 'MUI,Recoil,Redux,Next.js',
+      },
+      {
         name: 'Vue',
         year: 2,
+        detail: 'Pania',
       },
       {
         name: 'Angular',
