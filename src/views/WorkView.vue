@@ -11,7 +11,7 @@
       <template #content>
         <div class="content">
           <div class="image">
-            <img src="https://catbloom-images.s3.ap-northeast-1.amazonaws.com/portfolio.png" />
+            <img src="https://static.catbloom.net/portfolio.webp" />
           </div>
           <div class="info">
             <p>このサイトです。</p>
@@ -46,7 +46,7 @@
       <template #content>
         <div class="content">
           <div class="image">
-            <img src="https://catbloom-images.s3.ap-northeast-1.amazonaws.com/jantools.png" />
+            <img src="https://static.catbloom.net/jantools.webp" />
           </div>
           <div class="info">
             <p>麻雀の成績管理アプリです。</p>
