@@ -19,7 +19,10 @@
               </thead>
               <tbody>
                 <tr v-for="(v, i) in skill.exp" :key="i">
-                  <td>{{ v.name }}</td>
+                  <td>
+                    <s v-if="v.inactive">{{ v.name }}</s>
+                    <template v-else>{{ v.name }}</template>
+                  </td>
                   <td>{{ v.year }}年</td>
                   <td>{{ v.detail }}</td>
                 </tr>
@@ -34,7 +37,11 @@
       <template #sub-title>Other</template>
       <template #content>
         <div class="other">
-          <p>Git,Gitflow,Docker,DockerCompose,Nginx,Apache,Jira,Slack,MVC,Karma,Terraform</p>
+          <p>
+            Git,Gitflow,Docker,DockerCompose,Terraform,Nginx,Apache,Vercel
+            <br />
+            Vite,Karma,Playwright,MVC,Jira,Slack,ClaudeCode,Codex
+          </p>
         </div>
       </template>
     </PageContent>
@@ -50,6 +57,7 @@ interface Skills {
     name: string;
     year: number;
     detail?: string;
+    inactive?: boolean;
   }[];
 }
 
@@ -59,26 +67,27 @@ const skills: Skills[] = [
     exp: [
       {
         name: 'React',
-        year: 1,
-        detail: 'MUI,Recoil,Redux,Next.js',
+        year: 4,
+        detail: 'MUI,Recoil,Redux,Jotai,Next.js',
       },
       {
         name: 'Vue',
-        year: 2,
-        detail: 'Pania',
+        year: 5,
+        detail: 'Pinia,VueRouter',
       },
       {
         name: 'Angular',
         year: 2,
+        inactive: true,
       },
       {
         name: 'HTML/CSS',
-        year: 4,
+        year: 6,
         detail: 'BEM,SCSS,Bootstrap,TailwindCSS',
       },
       {
         name: 'TypeScript',
-        year: 4,
+        year: 6,
       },
     ],
   },
@@ -87,22 +96,23 @@ const skills: Skills[] = [
     exp: [
       {
         name: 'Golang',
-        year: 4,
-        detail: 'Echo,Gin',
+        year: 5,
+        detail: 'Echo,Gin,GORM',
       },
       {
         name: 'Python',
-        year: 2,
-        detail: 'Django',
+        year: 4,
+        detail: 'Django,FastAPI,Flask',
       },
       {
         name: 'PHP',
-        year: 2,
+        year: 4,
         detail: 'Cake,WordPress',
       },
       {
         name: 'Node.js',
-        year: 4,
+        year: 6,
+        detail: 'Hono,NestJS',
       },
     ],
   },
@@ -111,8 +121,13 @@ const skills: Skills[] = [
     exp: [
       {
         name: 'AWS',
-        year: 2,
-        detail: 'EC2,RDS,DynamoDB,S3,SAM,Lambda,CodeBuild etc...',
+        year: 4,
+        detail: 'EC2,ECS,RDS,DynamoDB,S3,CloudFront,Route53,APIGateway,SAM,Lambda etc...',
+      },
+      {
+        name: 'Cloudflare',
+        year: 1,
+        detail: 'Access,WorkersKV',
       },
       {
         name: 'Firebase',
@@ -121,8 +136,8 @@ const skills: Skills[] = [
       },
       {
         name: 'Database',
-        year: 4,
-        detail: 'MySQL,PostgreSQL',
+        year: 6,
+        detail: '設計,MySQL,PostgreSQL,MongoDB',
       },
     ],
   },
