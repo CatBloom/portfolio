@@ -51,9 +51,7 @@
           <div class="info">
             <p>麻雀の成績管理アプリです。</p>
             <p>
-              元々はAngular+Heroku+PostgreSQLで作成されたアプリでしたが、
-              <br />
-              運用コストや最近の流行りを意識し、React+Lambda+DynamoDBを使用したアプリにリプレースしました。
+              Angular + Heroku 構成から、運用コスト削減のため React + Lambda + DynamoDB にリプレースしました。
             </p>
             <ul class="parent-list">
               <li>TechStack</li>
@@ -109,10 +107,19 @@ import PageContent from '../components/PageContent.vue';
   display: flex;
   gap: 2rem;
   .image {
+    width: min(500px, 45%);
+    flex-shrink: 0;
     img {
-      width: 500px;
+      width: 100%;
       height: auto;
       border: solid 1px;
+    }
+  }
+  .info {
+    flex: 1;
+    min-width: 0;
+    p {
+      word-break: auto-phrase;
     }
   }
   .parent-list {
@@ -126,9 +133,7 @@ import PageContent from '../components/PageContent.vue';
   .content {
     flex-wrap: wrap;
     .image {
-      img {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 }
