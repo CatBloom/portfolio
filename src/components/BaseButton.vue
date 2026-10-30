@@ -29,6 +29,8 @@ const navigate = () => {
 </script>
 
 <style scoped lang="scss">
+@use 'sass:color';
+
 .button {
   border: none;
   padding: 0.5rem 1rem;
@@ -40,7 +42,7 @@ const navigate = () => {
   color: $light-font-color;
   &:hover {
     transition: 0.3s;
-    background-color: darken($light-background-color, 10%);
+    background-color: color.adjust($light-background-color, $lightness: -10%);
   }
 }
 
@@ -48,7 +50,7 @@ const navigate = () => {
   background-color: $dark-background-color;
   color: $dark-font-color;
   &:hover {
-    background-color: lighten($dark-background-color, 10%);
+    background-color: color.adjust($dark-background-color, $lightness: 10%);
   }
 }
 </style>
