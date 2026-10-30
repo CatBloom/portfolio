@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Button from '../components/BaseButton.vue';
 import DarkModeToggle from '../components/DarkModeToggle.vue';
 import { useDarkModeStore } from '../stores/dark-mode';
@@ -32,7 +32,7 @@ const routeButtons = [
 ];
 
 const typingText = ref('');
-const typing = (sentence) => {
+const typing = (sentence: string) => {
   Array.from(sentence).forEach((char, index) => {
     setTimeout(() => {
       typingText.value += char;
