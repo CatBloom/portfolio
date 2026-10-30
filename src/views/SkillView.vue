@@ -38,7 +38,7 @@
       <template #content>
         <div class="other">
           <p>
-            Git,Gitflow,Docker,DockerCompose,Terraform,Nginx,Apache,Vercel
+            Git,Gitflow,Docker,DockerCompose,Terraform,Nginx,Apache,Zabbix,Vercel
             <br />
             Vite,Karma,Playwright,MVC,Jira,Slack,ClaudeCode,Codex
           </p>
