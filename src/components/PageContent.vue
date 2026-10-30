@@ -3,7 +3,7 @@
     <h2 class="title">
       <slot name="title"></slot>
     </h2>
-    <h3 class="sub-titile">
+    <h3 class="sub-title">
       <slot name="sub-title"></slot>
     </h3>
     <div class="content">
@@ -21,7 +21,7 @@
   font-size: 2rem;
   text-align: center;
 }
-.sub-titile {
+.sub-title {
   font-weight: bold;
   font-size: 1.5rem;
 }

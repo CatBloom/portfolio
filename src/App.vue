@@ -17,13 +17,11 @@
 }
 
 .content {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.footer {
-  height: 10vh;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 2rem calc(2rem + 10vh);
 }
 </style>
 

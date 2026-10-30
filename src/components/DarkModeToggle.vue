@@ -1,5 +1,5 @@
 <template>
-  <div class="toggle" @click="clickEvent">
+  <div class="toggle">
     <div v-if="isDarkMode">
       <IconLight />
     </div>
@@ -17,11 +17,6 @@ import { storeToRefs } from 'pinia';
 
 const darkModeStore = useDarkModeStore();
 const { isDarkMode } = storeToRefs(darkModeStore);
-const emit = defineEmits(['click']);
-
-function clickEvent() {
-  emit('click');
-}
 </script>
 
 <style scoped lang="scss">

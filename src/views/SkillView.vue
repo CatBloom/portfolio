@@ -1,5 +1,5 @@
 <template>
-  <div class="skil">
+  <div class="skill">
     <PageContent>
       <template #title> Skill </template>
     </PageContent>
@@ -149,22 +149,30 @@ const skills: Skills[] = [
   .skill-table-content {
     padding: 1rem;
     table {
+      width: 100%;
+      table-layout: fixed;
       text-align: left;
       border-collapse: collapse;
+      th:nth-child(1) {
+        width: 10rem;
+      }
+      th:nth-child(2) {
+        width: 4rem;
+      }
       th {
         border-bottom: 1px solid;
         padding: 0.5rem;
       }
       td {
         padding: 0.5rem;
-        word-break: break-all;
+        overflow-wrap: anywhere;
       }
     }
   }
 }
 
 .other {
-  margin-left: 2rem;
-  word-break: break-all;
+  padding: 0 1.5rem;
+  overflow-wrap: anywhere;
 }
 </style>

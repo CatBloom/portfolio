@@ -4,23 +4,16 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { defineProps } from 'vue';
 import { useDarkModeStore } from '../stores/dark-mode';
 import { storeToRefs } from 'pinia';
 
 const darkModeStore = useDarkModeStore();
 const { isDarkMode } = storeToRefs(darkModeStore);
 
-const props = defineProps({
-  label: {
-    type: String,
-    required: true,
-  },
-  routePath: {
-    type: String,
-    required: true,
-  },
-});
+const props = defineProps<{
+  label: string;
+  routePath: string;
+}>();
 
 const router = useRouter();
 const navigate = () => {
