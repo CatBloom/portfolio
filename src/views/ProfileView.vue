@@ -9,7 +9,7 @@
       <template #content>
         <ul>
           <li>Name</li>
-          <p>Catbloom</p>
+          <p>Catbloom / 山本 翔丸</p>
           <li>Hobby</li>
           <p>アプリ制作、麻雀、サウナ巡り</p>
           <li>Introduction</li>
